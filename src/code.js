@@ -79,3 +79,8 @@ dateElement.innerHTML = formatDate(currentTime);
 
 let searchForm = document.querySelector("#weather-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let currentLocationButton = document.querySelector("#currentButton");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+searchCity("Tokyo");
