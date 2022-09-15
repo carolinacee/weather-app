@@ -7,12 +7,12 @@ h1 {
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
-  margin: 0;
+  margin: 5% 8%;
 }
 
 ul {
-  margin: 0 0 10px;
-  padding: 0;
+  margin: 0 20 10px;
+  padding: 5% 10% 2%;
 }
 
 li {
@@ -22,6 +22,7 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
+  margin-top: 15%;
 }
 
 .weatherApp {
@@ -58,4 +59,9 @@ p {
   display: block;
   margin: 0 auto;
   text-align: center;
+}
+
+.right-now {
+  margin-top: 15%;
+  margin-left: -20%;
 }
