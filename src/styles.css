@@ -1,29 +1,33 @@
 body {
   font-family: arial, sans-serif;
-  background-color: #d1e5ff;
+  background-image: url("https://images.unsplash.com/photo-1584267385494-9fdd9a71ad75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-h1 {
+.top-weather h1 {
   color: #7c7c7c;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
-  margin: 5% 8%;
-}
-
-ul {
-  margin: 0 20 10px;
-  padding: 5% 10% 2%;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 10%;
 }
 
 li {
   color: #7c7c7c;
   font-size: 16px;
   font-weight: 100;
-  height: 19px;
-  line-height: 1;
   list-style: none;
-  margin-top: 15%;
+  line-height: 1px;
+  margin-top: 2px;
+  padding-top: 15%;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 .weatherApp {
@@ -82,10 +86,18 @@ p {
 }
 
 .top-weather {
-  margin-top: 6%;
-  margin-left: 10%;
+  margin-top: 8%;
+  margin-left: 5%;
 }
 
-img {
+.icon img {
   padding-right: 2px;
+}
+
+.shadow-sm {
+  border-color: #fe5858 !important;
+}
+
+.btn {
+  background-color: #fe5858;
 }
