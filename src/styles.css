@@ -43,7 +43,7 @@ li {
 
 .temperature {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 400;
   line-height: 1;
 }
@@ -61,11 +61,8 @@ p {
   display: block;
   margin: 0 auto;
   text-align: center;
-}
-
-.right-now {
-  margin-top: 15%;
-  margin-left: -20%;
+  padding-top: 20px;
+  font-size: 12px;
 }
 
 .weekDays {
@@ -78,4 +75,17 @@ p {
 
 .celsandfarh {
   margin-top: 5%;
+}
+
+.icons {
+  font-size: 40px;
+}
+
+.top-weather {
+  margin-top: 6%;
+  margin-left: 10%;
+}
+
+img {
+  padding-right: 2px;
 }
