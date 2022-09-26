@@ -76,6 +76,8 @@ dateElement.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#weather-form");
 searchForm.addEventListener("submit", handleSubmit);
 
+celsiusTemperature = response.data.main.temp;
+
 // C/F
 
 function displayFahrenheitTemperature(event) {
