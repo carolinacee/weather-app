@@ -43,6 +43,8 @@ function displayWeatherCondition(response) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -101,5 +103,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 celsiusLink.classList.add("active");
 fahrenheitLink.classList.remove("active");
+
+let celsiusTemperature = null;
 
 searchCity("Tokyo");
