@@ -76,16 +76,12 @@ dateElement.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#weather-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-celsiusTemperature = response.data.main.temp;
-
 // C/F
+
+let currentTemperature = document.querySelector("#temperature");
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let currentTemperature = document.querySelector("#temperature");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
 
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
@@ -93,19 +89,17 @@ function displayFahrenheitTemperature(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-
   let currentTemperature = document.querySelector("#temperature");
   currentTemperature.innerHTML = Math.round(celsiusTemperature);
 }
-
-let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahr");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#cels");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
 
 searchCity("Tokyo");
