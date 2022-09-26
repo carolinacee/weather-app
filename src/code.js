@@ -76,33 +76,34 @@ dateElement.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#weather-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let currentLocationButton = document.querySelector("#currentButton");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.add("active", "pe-none");
-  fahrenheitLink.classList.remove("active", "pe-none");
-  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
+// C/F
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active", "pe-none");
-  fahrenheitLink.classList.add("active", "pe-none");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  let currentTemperature = document.querySelector("#temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let fahrenheitTemperature = null;
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 
-let celsiusLink = document.querySelector("#cels");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+  let currentTemperature = document.querySelector("#temperature");
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahr");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#cels");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Tokyo");
