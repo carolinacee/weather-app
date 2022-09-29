@@ -62,11 +62,10 @@ li:first-letter {
 }
 
 p {
-  display: block;
-  margin: 0 auto;
   text-align: center;
   padding-top: 20px;
   font-size: 12px;
+  margin-left: -3%;
 }
 
 .weekDays {
@@ -110,7 +109,8 @@ a {
   text-align: center;
   color: #000;
   margin-top: 3%;
-  margin-left: 15%;
+  margin-left: 18%;
+  padding: 10px;
 }
 
 .weather-forecast-date {
