@@ -32,9 +32,9 @@ li:first-letter {
 
 .weatherApp {
   border: 1px solid #dadde1;
-  padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
+  padding: 20px;
   max-width: 600px;
   background-color: #fff;
 }
@@ -74,14 +74,11 @@ p {
 
 .icons {
   margin-top: 5%;
+  font-size: 40px;
 }
 
 .celsandfarh {
   margin-top: 5%;
-}
-
-.icons {
-  font-size: 40px;
 }
 
 .top-weather {
@@ -109,7 +106,7 @@ a {
   text-align: center;
   color: #000;
   margin-top: 3%;
-  margin-left: 6%;
+  margin-left: 2%;
   padding: 10px;
 }
 
@@ -124,4 +121,5 @@ a {
 
 .weather-forecast-temperatures {
   font-size: 16px;
+  width: 60px;
 }
